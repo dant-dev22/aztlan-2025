@@ -9,7 +9,7 @@ def get_participants():
         {
             "name": "Jane Doe",
             "birth_date": "2000-01-01",
-            "training_duration": "3 years",
+            "experience": "3 years",
             "belt_color": "blue",
             "club": "Warriors",
             "biological_sex": "female"

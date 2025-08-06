@@ -1,10 +1,14 @@
-from pydantic import BaseModel
-from datetime import date
+# app/models/participant.py
+from sqlalchemy import Column, Integer, String, Date
+from app.database import Base
 
-class Participant(BaseModel):
-    name: str
-    birth_date: date
-    training_duration: str
-    belt_color: str
-    club: str
-    biological_sex: str
+class Participant(Base):
+    __tablename__ = "participants"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    birth_date = Column(Date, nullable=False)
+    experience = Column(String, nullable=False)
+    belt_color = Column(String, nullable=False)
+    club = Column(String, nullable=False)
+    biological_sex = Column(String, nullable=False)
