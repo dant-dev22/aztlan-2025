@@ -13,3 +13,4 @@ class Participant(Base):
     belt_color = Column(String, nullable=False)
     club = Column(String, nullable=False)
     biological_sex = Column(String, nullable=False)
+    payment_proof_url = Column(String, nullable=True)
