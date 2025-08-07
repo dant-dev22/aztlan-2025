@@ -1,5 +1,5 @@
 # app/models/participant.py
-from sqlalchemy import Column, Integer, String, Date
+from sqlalchemy import Column, Integer, String, Date, Boolean
 from app.database import Base
 
 class Participant(Base):
@@ -14,3 +14,4 @@ class Participant(Base):
     club = Column(String, nullable=False)
     biological_sex = Column(String, nullable=False)
     payment_proof_url = Column(String, nullable=True)
+    is_paid = Column(Boolean, default=False)

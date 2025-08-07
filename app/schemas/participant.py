@@ -14,3 +14,6 @@ class ParticipantBase(BaseModel):
 
 class ParticipantOut(ParticipantBase):
     aztlan_id: str  # Solo aquí está incluido para la respuesta
+
+class PaymentProofUpdate(BaseModel):
+    payment_proof_url: str
