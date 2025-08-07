@@ -6,9 +6,10 @@ class Participant(Base):
     __tablename__ = "participants"
 
     id = Column(Integer, primary_key=True, index=True)
+    aztlan_id = Column(String, unique=True, index=True, nullable=False)
     name = Column(String, nullable=False)
     birth_date = Column(Date, nullable=False)
-    experience = Column(String, nullable=False)
+    experience = Column(Integer, nullable=False)
     belt_color = Column(String, nullable=False)
     club = Column(String, nullable=False)
     biological_sex = Column(String, nullable=False)
